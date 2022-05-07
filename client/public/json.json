@@ -1,0 +1,27 @@
+{
+    "themeId": 3,
+    "newTheme": {
+        "block": 3,
+        "fontSize": 22,
+        "fontFamily": "arial",
+        "fontColor": "#0000ff",
+        "mainColor": "#00ffff"
+    },
+    "topMenu": 4,
+    "topMenuSettings": {
+        "fontSize": "22",
+        "fontFamily": "arial",
+        "fontColor": "#8000ff",
+        "mainColor": "#00ff00"
+    },
+    "topMenuOption": true,
+    "sliderTime": 4000,
+    "sliderDescription": "qqqqqqqq",
+    "Footer": 4,
+    "FooterSettings": {
+        "fontSize": "22",
+        "fontFamily": "arial",
+        "fontColor": "#008040",
+        "mainColor": "#ff0000"
+    }
+}

@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon-96x96.png') }}"  type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='favicon-96x96.png') }}" type="image/png">
+{% endblock %}}
+{% block title %}{{ title }}{% endblock %}
+{% block navbar %}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <span class="h3 text-danger">Nowe dane logowania</span>
+    </div>
+    {{ wtf.quick_form(form, action='/saveRegister') }}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-96x96.png') }}" type="image/png">
+<link rel="icon" href="{{ url_for('static', filename='favicon-96x96.png') }}" type="image/png">
+{% endblock %}}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <span class="h3 text-danger">Konto administratora</span>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Login</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td class="col-lg-2">
+                    <a class="btn btn-sm btn-warning" href="/edit?id={{ record[2] }}">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-sm btn-warning" href="/">Back</a>
+</div>
+{% endblock %}
